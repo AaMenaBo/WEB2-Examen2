@@ -15,7 +15,7 @@ class Comentario extends Model
         'nombre_usuario',
         'calificacion',
         'detalles',
-        'id_atraccion'
+        'atraccion_id'
     ];
 
     public function atraccion()

@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AtraccionController;
 
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
+
 
 //Rutas de vistas atracciones
 Route::get('/atracciones', [AtraccionController::class, 'index']);

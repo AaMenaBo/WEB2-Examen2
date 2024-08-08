@@ -15,15 +15,15 @@ class Atraccion extends Model
     protected $fillable = [
         'titulo',
         'descripcion',
-        'id_especie'
+        'especie_id'
     ];
     public function comentarios()
     {
-        return $this->hasMany(Comentario::class, 'id_atraccion');
+        return $this->hasMany(Comentario::class);
     }
 
     public function especie()
     {
-        return $this->belongsTo(Especie::class, 'id_especie');
+        return $this->belongsTo(Especie::class);
     }
 }
