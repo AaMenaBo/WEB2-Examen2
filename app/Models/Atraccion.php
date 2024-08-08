@@ -26,4 +26,13 @@ class Atraccion extends Model
     {
         return $this->belongsTo(Especie::class);
     }
+
+    protected function casts(): array
+    {
+        return [
+            'especie_id' => 'integer',
+            'titulo' => 'string',
+
+        ];
+    }
 }

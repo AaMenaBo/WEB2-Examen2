@@ -51,17 +51,16 @@ class AtraccionController extends Controller
 
     public function cantidadComentarios($id)
     {
-        $atraccion = Atraccion::withCount('comentarios')->find($id);
-
-        return view('atracciones.cantidad_comentarios', compact('atraccion'));
+        $atracciones = Atraccion::all();
+        return view('atracciones.cantidad_comentarios', ['atracciones' => $atracciones]);
     }
 
-    public function atraccionesPorEspecie($id)
+    public function atraccionesPorEspecie(Especie $especie)
     {
-        $especie = Especie::with('atracciones')->find($id);
-
+        dd($especie);
         return view('especies.atracciones', compact('especie'));
     }
+
 
     public function calificacionPromedioPorEspecie($id)
     {

@@ -9,7 +9,7 @@
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Calificación</th>
-                    <th> Acciones </th>
+                    <th>Acciones </th>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +25,7 @@
                                     class="btn btn-primary mb-2">Comentarios entre valores</a>
                                 <a href="{{ url('/atracciones/1/comentarios') }}" class="btn btn-primary mb-2">Cantidad de
                                     Comentarios de Atracción</a>
-                                <a href="{{ url('/especies/1/atracciones') }}" class="btn btn-primary mb-2">Atracciones que
+                                <a href="{{ url('/especies/3/atracciones') }}" class="btn btn-primary mb-2">Atracciones que
                                     exhiben Especie </a>
                                 <a href="{{ url('/especies/1/calificacion_promedio') }}"
                                     class="btn btn-primary mb-2">Calificación Promedio de Atracciones que exhiben Especie </a>
