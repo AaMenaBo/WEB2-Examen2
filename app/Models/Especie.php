@@ -9,4 +9,15 @@ class Especie extends Model
 {
     use HasFactory;
     protected $table = 'especies';
+
+    protected $fillable = [
+        'nombre',
+        'periodo',
+        'descripcion'
+    ];
+
+    public function atracciones()
+    {
+        return $this->hasMany(Atraccion::class, 'id_especie');
+    }
 }
