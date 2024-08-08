@@ -18,6 +18,6 @@ class Especie extends Model
 
     public function atracciones()
     {
-        return $this->hasMany(Atraccion::class, 'id_especie');
+        return $this->hasMany(Atraccion::class);
     }
 }

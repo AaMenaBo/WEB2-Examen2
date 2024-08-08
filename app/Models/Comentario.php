@@ -19,6 +19,6 @@ class Comentario extends Model
 
     public function atraccion()
     {
-        return $this->belongsTo(Atraccion::class, 'id_atraccion');
+        return $this->belongsTo(Atraccion::class);
     }
 }
