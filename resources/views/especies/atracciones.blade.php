@@ -1,12 +1,21 @@
 @extends('layouts.app')
 @section('content')
     <h1>Atracciones que exhiben {{ $especie->nombre }}</h1>
-    <ul>
-        @foreach($especie->atracciones as $atraccion)
-            <li>
-                {{ $atraccion->titulo }} - Calificación Promedio: {{ $atraccion->calificacion_promedio }}
-            </li>
-        @endforeach
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Calificación Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($especie->atracciones as $atraccion)
+                <tr>
+                    <td>{{ $atraccion->titulo }}</td>
+                    <td>{{ $atraccion->calificacion_promedio }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
 @endsection
