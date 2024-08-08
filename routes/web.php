@@ -11,6 +11,7 @@ require __DIR__.'/auth.php';
 
 
 
+
 //Rutas de vistas atracciones
 Route::get('/atracciones', [AtraccionController::class, 'index']);
 Route::get('/atracciones/comentarios', [AtraccionController::class, 'comentariosEntreValores']);
