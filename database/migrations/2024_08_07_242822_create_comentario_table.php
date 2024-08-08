@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('comentario', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Atraccion::class);
+            $table->foreignIdFor(\App\Models\Atraccion::class)->constrained()->cascadeOnDelete();
             $table->string('nombre_usuario');
             $table->integer('calificacion');
-            $table->string('detalles');
+            $table->text('detalles');
             $table->timestamps();
         });
     }
